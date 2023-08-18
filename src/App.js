@@ -9,6 +9,8 @@ import EditCourse from "./pages/editCourse.page";
 import ShowAllStudents from "./pages/showAllStudents.page";
 import ShowCourse from "./pages/showCourse.page";
 import ShowStudent from "./pages/showStudent.page";
+import Layout from "./components/general/layout/layout.component";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const routeConfigurations = [
   { path: "/notFound", element: <NotFound /> },
@@ -26,11 +28,13 @@ const routeConfigurations = [
 function App() {
   return (
     <div className="app">
-      <Routes>
-        {routeConfigurations.map((route, index) => (
-          <Route key={index} {...route} />
-        ))}
-      </Routes>
+      <Layout>
+        <Routes>
+          {routeConfigurations.map((route, index) => (
+            <Route key={index} {...route} />
+          ))}
+        </Routes>
+      </Layout>
     </div>
   );
 }
