@@ -16,7 +16,7 @@ const routeConfigurations = [
   { path: "/notFound", element: <NotFound /> },
   { path: "/addCourse", element: <AddCourse /> },
   { path: "/addStudent", element: <AddStudent /> },
-  { path: "/editCourse", element: <EditCourse /> },
+  { path: "/editCourse/:id/", element: <EditCourse /> },
   { path: "/showAllStudents", element: <ShowAllStudents /> },
   { path: "/showCourse/:id/", element: <ShowCourse /> },
   { path: "/showStudent/:id/", element: <ShowStudent /> },
