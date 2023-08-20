@@ -1,3 +1,6 @@
+import { Container } from "react-bootstrap";
+import AddUserForm from "../components/users/addUserForm/addUserForm.component";
+
 const AddStudent = () => {
   return (
     <section
@@ -8,7 +11,9 @@ const AddStudent = () => {
         alignItems: "center",
       }}
     >
-      <h1>AddStudent</h1>
+      <Container>
+        <AddUserForm />
+      </Container>
     </section>
   );
 };
