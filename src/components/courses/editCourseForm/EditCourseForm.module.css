@@ -1,0 +1,15 @@
+.formColumn {
+  max-width: 500px !important;
+}
+.row a {
+  font-size: 0.8rem;
+}
+.row {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.formCont {
+  box-shadow: 0px 0px 10px 5px #ddd;
+}
