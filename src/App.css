@@ -1,4 +1,16 @@
+/****************
+general style
+*****************/
 a {
   color: #000 !important;
   text-decoration: unset !important;
+}
+
+/****************
+custom classes
+*****************/
+/*input-error-massage */
+.input-error-massage {
+  font-size: 0.8rem;
+  color: #e41e3f;
 }

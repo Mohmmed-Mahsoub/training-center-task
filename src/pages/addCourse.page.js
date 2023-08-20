@@ -1,3 +1,6 @@
+import { Container } from "react-bootstrap";
+import AddCourseForm from "../components/courses/addCourseForm/addCourseForm.component";
+
 const AddCourse = () => {
   return (
     <section
@@ -8,7 +11,9 @@ const AddCourse = () => {
         alignItems: "center",
       }}
     >
-      <h1>addCourse</h1>
+      <Container>
+        <AddCourseForm />
+      </Container>
     </section>
   );
 };
