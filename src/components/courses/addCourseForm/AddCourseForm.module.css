@@ -1,0 +1,18 @@
+.row a {
+  font-size: 0.8rem;
+}
+.row {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.formCont {
+  box-shadow: 0px 0px 10px 5px #ddd;
+}
+
+@media only screen and (min-width: 500px) {
+  .formColumn {
+    max-width: 500px !important;
+  }
+}
