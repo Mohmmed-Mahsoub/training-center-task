@@ -38,7 +38,8 @@
 .adjust:hover {
   border-color: #0080ff !important;
 }
-.delete i {
+.delete i,
+.loading {
   color: red;
 }
 .delete {
