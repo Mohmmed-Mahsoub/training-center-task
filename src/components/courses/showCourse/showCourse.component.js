@@ -1,5 +1,6 @@
-import { Container, Table } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import styles from "./ShowCourse.module.css";
+import AddStudentToCourse from "../addStudentToCourse/addStudentToCourse.component";
 
 const ShowCourseComp = ({
   courseData: { id, course_name, capacity, status, start_date, end_date },
@@ -29,6 +30,7 @@ const ShowCourseComp = ({
           </div>
         </div>
       </div>
+      <AddStudentToCourse course_id={id} course_name={course_name} />
     </Container>
   );
 };
