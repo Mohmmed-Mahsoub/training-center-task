@@ -20,7 +20,7 @@ const AddUserForm = () => {
     setLoading(true);
     //add user
     try {
-      const res = await axios.post(`https://sheetdb.io/api/v1/9wtqfny1g7km6`, {
+      const res = await axios.post(`${process.env.REACT_APP_STUDENTS_API}`, {
         data: [
           {
             id: uuid(),

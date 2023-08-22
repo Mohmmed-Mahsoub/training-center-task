@@ -12,7 +12,7 @@ const ShowCourse = () => {
     error,
     isLoading,
   } = useSWR(
-    `https://sheetdb.io/api/v1/owv6j5nrau720/search?id=${id}`,
+    `${process.env.REACT_APP_COURSES_API}/search?id=${id}`,
     fetcher
   );
 

@@ -7,13 +7,14 @@ import MainLoader from "../components/general/mainLoader/mainLoader.component";
 import AllStudentsList from "../components/users/allStudentsList/allStudentsList.component";
 
 const ShowAllStudents = () => {
+  console.log("hhhhhhh", process.env.REACT_APP_STUDENTS_API);
   //fetch all users by SWR to easy handle fetching and caching data if there isn't any changes to avoid unnessary requests
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const {
     data: users,
     error,
     isLoading,
-  } = useSWR("https://sheetdb.io/api/v1/9wtqfny1g7km6", fetcher);
+  } = useSWR(`${process.env.REACT_APP_STUDENTS_API}`, fetcher);
 
   return (
     <section

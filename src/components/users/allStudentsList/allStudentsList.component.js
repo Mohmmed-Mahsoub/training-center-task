@@ -17,12 +17,12 @@ const AllStudentsList = ({
     //delet user
     try {
       const res = await axios.delete(
-        `https://sheetdb.io/api/v1/9wtqfny1g7km6/id/${id}`
+        `${process.env.REACT_APP_STUDENTS_API}/id/${id}`
       );
       if (res?.data?.deleted) {
         setLoadingDel(false);
         // Manually trigger revalidation for the specified key to fetch new data after delete to avoid show caching data for a moment when navigate even if it was deleted
-        mutate("https://sheetdb.io/api/v1/9wtqfny1g7km6");
+        mutate(`${process.env.REACT_APP_STUDENTS_API}`);
         //show success after delete
         showToast({
           type: "success",

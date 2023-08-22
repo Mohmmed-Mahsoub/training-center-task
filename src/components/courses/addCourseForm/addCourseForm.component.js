@@ -10,7 +10,6 @@ import { isEndDateAfterOrEqualStart } from "../../../helpers/utilites/isEndDateA
 
 const AddCourseForm = () => {
   const [loading, setLoading] = useState(false);
-
   const {
     register,
     handleSubmit,
@@ -23,7 +22,7 @@ const AddCourseForm = () => {
     setLoading(true);
     //add course
     try {
-      const res = await axios.post(`https://sheetdb.io/api/v1/owv6j5nrau720`, {
+      const res = await axios.post(`${process.env.REACT_APP_COURSES_API}`, {
         data: [
           {
             id: uuid(),

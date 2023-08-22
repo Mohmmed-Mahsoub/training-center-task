@@ -30,7 +30,7 @@ const EditCourseForm = ({
     //edite course
     try {
       const res = await axios.patch(
-        `https://sheetdb.io/api/v1/owv6j5nrau720/id/${id}`,
+        `${process.env.REACT_APP_COURSES_API}/id/${id}`,
         {
           data: {
             ...courseInputs,
