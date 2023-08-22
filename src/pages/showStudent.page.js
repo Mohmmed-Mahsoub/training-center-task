@@ -13,7 +13,7 @@ const ShowStudent = () => {
     error,
     isLoading,
   } = useSWR(
-    `https://sheetdb.io/api/v1/9wtqfny1g7km6/search?id=${id}`,
+    `${process.env.REACT_APP_STUDENTS_API}/search?id=${id}`,
     fetcher
   );
   return (

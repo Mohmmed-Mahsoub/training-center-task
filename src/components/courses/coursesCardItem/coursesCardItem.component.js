@@ -21,7 +21,7 @@ const CoursesCardItem = ({
     //delet course
     try {
       const res = await axios.delete(
-        `https://sheetdb.io/api/v1/owv6j5nrau720//id/${id}`
+        `${process.env.REACT_APP_COURSES_API}/id/${id}`
       );
       if (res?.data?.deleted) {
         setLoadingDel(false);

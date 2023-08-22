@@ -14,7 +14,7 @@ const ShowAllCourses = () => {
     data: fetchedCourses,
     error,
     isLoading,
-  } = useSWR("https://sheetdb.io/api/v1/owv6j5nrau720", fetcher);
+  } = useSWR(`${process.env.REACT_APP_COURSES_API}`, fetcher);
 
   // State variable to store the processed data to easly change UI by change the state when delete course
   const [courses, setCourses] = useState([]);
