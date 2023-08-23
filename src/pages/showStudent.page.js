@@ -12,10 +12,14 @@ const ShowStudent = () => {
     data: userData,
     error,
     isLoading,
-  } = useSWR(
-    `${process.env.REACT_APP_STUDENTS_API}/search?id=${id}`,
-    fetcher
-  );
+  } = useSWR(`${process.env.REACT_APP_STUDENTS_API}/search?id=${id}`, fetcher);
+
+  const {
+    data: allStudentsCourses,
+    error: studentCoursesError,
+    isLoading: isLoadingUserCourses,
+  } = useSWR(`${process.env.REACT_APP_STUDENTS_TO_COURSE_API}`, fetcher);
+
   return (
     <section
       style={{
@@ -27,7 +31,12 @@ const ShowStudent = () => {
       ) : error ? (
         <div> An error has occurred.</div>
       ) : userData[0]?.id ? (
-        <ShowUserComp userData={userData[0]} />
+        <ShowUserComp
+          userData={userData[0]}
+          allStudentsCourses={allStudentsCourses}
+          isLoadingUserCourses={isLoadingUserCourses}
+          studentCoursesError={studentCoursesError}
+        />
       ) : (
         "not found"
       )}
