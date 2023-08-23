@@ -46,17 +46,21 @@ const AddStudentToCourse = ({ course_name, course_id }) => {
   }, [query]);
 
   return (
-    <div className="row mt-3">
-      <div className="col-3">add user to course</div>
-      <div className="col-9">
-        <SearchInput query={query} setQuery={setQuery} />
-        <SearchResultContainer
-          loading={loading}
-          searchResults={searchResults}
-          setSearchResults={setSearchResults}
-          course_name={course_name}
-          course_id={course_id}
-        />
+    <div className="row">
+      <div className="col-12 col-md-3 fw-bold">
+        <div className="py-3">add user to course:</div>
+      </div>
+      <div className="col-12 col-md-9">
+        <div className="py-3">
+          <SearchInput query={query} setQuery={setQuery} />
+          <SearchResultContainer
+            loading={loading}
+            searchResults={searchResults}
+            setSearchResults={setSearchResults}
+            course_name={course_name}
+            course_id={course_id}
+          />
+        </div>
       </div>
     </div>
   );

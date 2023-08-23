@@ -4,6 +4,7 @@ import SelectUser from "../../courses/selectUser/selectUser.component";
 import { useState } from "react";
 import { showToast } from "../../../helpers/showToast";
 import axios from "axios";
+import MainLoader from "../../general/mainLoader/mainLoader.component";
 const SearchResultContainer = ({
   loading,
   searchResults,
@@ -69,7 +70,7 @@ const SearchResultContainer = ({
   return (
     <div>
       {loading ? (
-        <div>loading</div>
+        <MainLoader />
       ) : searchResults?.length > 0 ? (
         <>
           <Table hover responsive>
@@ -97,7 +98,7 @@ const SearchResultContainer = ({
           </Button>
         </>
       ) : searchResults?.length == 0 ? (
-        <div>no matched user</div>
+        <NoItemPlaceholder text="no matched user" size="fs-5" />
       ) : (
         <NoItemPlaceholder text="Search fo a student" size="fs-5" />
       )}
