@@ -1,4 +1,4 @@
-# Hallabak
+# Training-center-task
 
 The source code for the [https://training-center-task.vercel.app/](https://training-center-task.vercel.app/).
 
