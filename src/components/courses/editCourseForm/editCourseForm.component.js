@@ -18,7 +18,6 @@ const EditCourseForm = ({
 
   //set course data to inputs
   useEffect(() => {
-    setValue("course_name", course_name);
     setValue("capacity", capacity);
     setValue("status", status);
     setValue("start_date", start_date);
@@ -61,18 +60,7 @@ const EditCourseForm = ({
               <div className="col-12">
                 <Form.Group className="mb-3" controlId="formGridCourseName">
                   <Form.Label>Course Name</Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Course Name"
-                    {...register("course_name", {
-                      required: "This field is required",
-                    })}
-                  />
-                  {errors.course_name && (
-                    <p className="input-error-massage">
-                      {errors.course_name.message}
-                    </p>
-                  )}
+                  <p className={styles.course_name}>{course_name}</p>
                 </Form.Group>
               </div>
             </div>
